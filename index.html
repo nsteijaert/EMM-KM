@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HZ EMM Knowledge Model 3D Visualization</title>
+		<link rel="stylesheet" href="LIB/font-awesome-4.2.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="CSS/bootstrap.min.css">
+		<link rel="stylesheet" href="CSS/style.css">
+		<script src="JS/scripts.js"></script>
+
+	</head>
+	<body>
+		<br>
+		<br>
+		<div class="intro_center_div">
+			<img id="EMM_intro_logo" src="IMG/hz.png" alt="logo">
+		</div>
+		<br>
+		<div class="intro_center_div">
+			<span class="fa-stack fa-4x"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-refresh fa-spin fa-stack-1x fa-inverse"></i> </span>
+		</div>
+		<div class="intro_center_div">
+			<div class="text">
+				The HZ EMM Knowledge model visualization is loading..
+			</div>
+			<br>
+			<div class="progress">
+				<div id="bar_state" class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+					0%
+				</div>
+			</div>
+			<div class="text" id="state_info">...</div>
+		</div>
+		<br>
+		<button type="button" class="btn btn-default" onclick="set_state('20%', 'Connecting to SPARQL endpoint...')">
+			State 1
+		</button>
+		<button type="button" class="btn btn-default" onclick="set_state('48%', 'Querying endpoint...')">
+			State 2
+		</button>
+		<button type="button" class="btn btn-default" onclick="set_state('78%', 'Running link query...')">
+			State 3
+		</button>
+		<button type="button" class="btn btn-default" onclick="set_state('100%', 'rendering...')">
+			State 4
+		</button>
+	</body>
+</html>

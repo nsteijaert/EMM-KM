@@ -1,0 +1,20 @@
+#EMM_intro_logo {
+	width:250px;
+	}
+.intro_center_div {
+	width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
+
+body {
+	background-color:#7E7E82;
+}
+
+.text
+{
+   color: #FFFFFF;
+   font-family: Arial;
+}
+
