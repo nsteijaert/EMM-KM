@@ -6,6 +6,10 @@ function set_state(state,text)
 {
 	document.getElementById("bar_state").innerHTML = state;
 	document.getElementById("bar_state").setAttribute("style","width:"+ state + ";");
-	//document.getElementById("bar_state").setAttribute("aria-valuenow",state);
 	document.getElementById("state_info").innerHTML = text;
+	
+	var str = '';
+	str = state.substring(0, state.length - 1);
+	console.log(str);
+	document.getElementById("bar_state").setAttribute("aria-valuenow",state);
 }
