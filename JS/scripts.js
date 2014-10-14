@@ -1,5 +1,5 @@
 //@author NJK
-//This script contains custom function used for utility purposes.
+//This script contains custom functions used for utility purposes.
 
 //This variable is used to control debug settings. The default value is 0 (false), this disables debug output to the JavaSCript console. Enable by changing the value to 1 (true)
 var debug = 0;
@@ -19,8 +19,6 @@ function init() {
 	initCamera();
 	initRenderer();
 	initControls();
-
-	getJSON("./data/legenda.json", "./data/relationships.json");
 	render();
 }
 
@@ -28,16 +26,16 @@ function init() {
 function initCamera() {
 	camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 50000);
 
-	//The position of the cameria is currently hardcoded, the current position matches the center of the visualization.
-	camera.position.z = 2500;
-	camera.position.x = 550;
-	camera.position.y = -600;
+	//The position of the cameria
+	camera.position.z = 0;
+	camera.position.x = 0;
+	camera.position.y = 0;
 
-	//A scene is created, a scene can be consired to be the drawing board of the visualization
+	//Creates a scene
 	scene = new THREE.Scene();
 }
 
-//This function adds interactivity to the visualization by allowing it to be moved and zoomed in upon
+//This function adds interactivity to the visualization by allowing it to be moved and zoomed in
 function initControls() {
 	controls = new THREE.TrackballControls(camera, renderer.domElement);
 	controls.rotateSpeed = 0.5;
